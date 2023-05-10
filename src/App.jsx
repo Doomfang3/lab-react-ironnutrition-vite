@@ -27,6 +27,7 @@ function App() {
 		});
 		setFoodDisState(newFoods);
 	};
+
 	const deleteFood = (id) => {
 		const newFood = foodsState.filter((food) => food.id !== id);
 		setFoodsState(newFood);
@@ -45,7 +46,6 @@ function App() {
 				{hiddenState ? "Add New Food" : "Hide Form"}
 			</Button>
 
-			{/* Display Search component here */}
 			<Search applySearch={applySearch} />
 
 			<Divider>Food List</Divider>
@@ -59,6 +59,7 @@ function App() {
 					/>
 				</div>
 			) : null}
+
 			<Row style={{ width: "100%", justifyContent: "center" }}>
 				{foodsDisState.map((food) => {
 					return (
